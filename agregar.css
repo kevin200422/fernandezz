@@ -1,0 +1,168 @@
+/* Estilo para el encabezado */
+.header {
+    background-color: #007bff;
+    padding: 15px;
+}
+
+.header .logo {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.header .navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.header .navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.header .navbar a:hover {
+    color: #ffeb3b;
+    text-decoration: underline;
+}
+
+/* Estilo para el formulario */
+.form-section {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.form-section h2 {
+    margin-bottom: 20px;
+    color: #343a40;
+}
+
+.form-section form input,
+.form-section form textarea,
+.form-section form button {
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.form-section form button {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.form-section form button:hover {
+    background-color: #0056b3;
+    color: #fff;
+}
+
+/* Estilo para la lista de médicos */
+.medicos-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.medico-card {
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.medico-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.medico-card .medico-info {
+    margin-bottom: 15px;
+}
+
+.medico-card h3 {
+    font-size: 1.2rem;
+    color: #007bff;
+}
+
+.medico-card p {
+    margin: 5px 0;
+    color: #6c757d;
+}
+
+.medico-card form {
+    margin-top: 10px;
+}
+
+.medico-card form input,
+.medico-card form textarea {
+    margin-bottom: 10px;
+}
+
+.medico-card form button {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.medico-card form button:hover {
+    background-color: #218838;
+}
+
+.delete-btn {
+    display: inline-block;
+    background-color: #dc3545;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.delete-btn:hover {
+    background-color: #c82333;
+    color: #fff;
+}
+
+/* Estilo para la sección de sugerencias */
+.suggestions {
+    background-color: #e9ecef;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.suggestions h2 {
+    color: #343a40;
+}
+
+.suggestions form textarea {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.suggestions form button {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.suggestions form button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo para el pie de página */
+.footer {
+    background-color: #343a40;
+    color: #fff;
+    padding: 15px 0;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.footer-content p {
+    margin: 0;
+    font-size: 0.9rem;
+}

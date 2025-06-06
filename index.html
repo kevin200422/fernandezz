@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Zona Médica</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <style>
+        /* Variables de colores y transiciones */
+        :root {
+            --primary-color: #007bff;
+            --secondary-color: #6c757d;
+            --text-color: #333;
+            --transition: all 0.3s ease;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: white;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 1rem;
+        }
+
+        .navbar-brand img {
+            height: 40px;
+        }
+
+        .nav-link {
+            color: var(--text-color);
+            transition: var(--transition);
+        }
+
+        .nav-link:hover {
+            color: var(--primary-color);
+        }
+
+        /* Estilos de botones de autenticación */
+        .auth-buttons {
+            margin-left: 1rem;
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .btn-login {
+            background-color: transparent;
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+            padding: 0.5rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 500;
+            transition: var(--transition);
+            text-decoration: none;
+        }
+
+        .btn-login:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .btn-register {
+            background-color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 500;
+            transition: var(--transition);
+            text-decoration: none;
+        }
+
+        .btn-register:hover {
+            background-color: var(--secondary-color);
+            border-color: var(--secondary-color);
+            color: white;
+        }
+
+        /* Responsive para botones de autenticación */
+        @media (max-width: 991px) {
+            .auth-buttons {
+                margin: 1rem 0;
+                justify-content: center;
+            }
+        }
+
+        /* Otros estilos previos permanecen igual */
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .hero {
+            background-image: url('IMAGENES/fondo.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer {
+            background-color: #f8f9fa;
+            padding: 1rem 0;
+        }
+
+        .footer-link {
+            color: var(--text-color);
+            transition: var(--transition);
+        }
+
+        .footer-link:hover {
+            color: var(--primary-color);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a href="#" class="navbar-brand">
+                <img src="IMAGENES/Logo Zona medica.png" alt="Logo Zona Médica">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a href="index.html" class="nav-link"><i class="fas fa-home me-1"></i>Inicio</a></li>
+                    <li class="nav-item"><a href="nosotros.html" class="nav-link"><i class="fas fa-users me-1"></i>Nosotros</a></li>
+                    <li class="nav-item"><a href="noticias.html" class="nav-link"><i class="fas fa-newspaper me-1"></i>Noticias</a></li>
+                    <li class="nav-item"><a href="medicos.php" class="nav-link"><i class="fas fa-info-circle me-1"></i>Más Información</a></li>
+                    <li class="nav-item"><a href="contacto.html" class="nav-link"><i class="fas fa-envelope me-1"></i>Contacto</a></li>
+                </ul>
+                <div class="auth-buttons">
+                    <a href="login.php" class="btn-login">
+                        <i class="fas fa-sign-in-alt me-1"></i>Iniciar Sesión
+                    </a>
+                    <a href="registrarse.php" class="btn-register">
+                        <i class="fas fa-user-plus me-1"></i>Registrarse
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Héroe -->
+    <section class="hero">
+        <div class="container">
+            <h1>Bienvenido a Zona Médica</h1>
+            <p>Tu salud en las mejores manos</p>
+            <a href="login.php" class="btn btn-primary">Conoce más</a>
+        </div>
+    </section>
+
+
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Zona Médica</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+        <style>
+            /* Variables de colores y transiciones */
+            :root {
+                --primary-color: #007bff;
+                --secondary-color: #6c757d;
+                --text-color: #333;
+                --transition: all 0.3s ease;
+            }
+    
+            /* Estilos previos se mantienen igual hasta el footer */
+            /* ... [estilos previos] ... */
+    
+            /* Nuevos estilos para la sección de servicios */
+            .services {
+                padding: 6rem 0;
+                background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            }
+    
+            .service-card {
+                background: white;
+                border-radius: 15px;
+                padding: 2rem;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+                transition: var(--transition);
+                height: 100%;
+                position: relative;
+                overflow: hidden;
+            }
+    
+            .service-card::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 4px;
+                background: var(--primary-color);
+                transform: scaleX(0);
+                transition: transform 0.3s ease;
+                transform-origin: left;
+            }
+    
+            .service-card:hover {
+                transform: translateY(-10px);
+            }
+    
+            .service-card:hover::before {
+                transform: scaleX(1);
+            }
+    
+            .service-icon {
+                width: 70px;
+                height: 70px;
+                background: rgba(0, 123, 255, 0.1);
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 1.5rem;
+                transition: var(--transition);
+            }
+    
+            .service-card:hover .service-icon {
+                background: var(--primary-color);
+                color: white;
+            }
+    
+            .service-icon i {
+                font-size: 2rem;
+                color: var(--primary-color);
+                transition: var(--transition);
+            }
+    
+            .service-card:hover .service-icon i {
+                color: white;
+            }
+    
+            .service-title {
+                font-size: 1.5rem;
+                margin-bottom: 1rem;
+                color: var(--text-color);
+            }
+    
+            .service-description {
+                color: var(--secondary-color);
+                line-height: 1.6;
+            }
+    
+            /* Mejoras en las transiciones existentes */
+            .navbar {
+                transition: background-color 0.4s ease, box-shadow 0.4s ease;
+            }
+    
+            .nav-link {
+                position: relative;
+            }
+    
+            .nav-link::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                width: 0;
+                height: 2px;
+                background: var(--primary-color);
+                transition: all 0.3s ease;
+                transform: translateX(-50%);
+            }
+    
+            .nav-link:hover::after {
+                width: 100%;
+            }
+    
+            /* Animación para el hero */
+            @keyframes fadeInUp {
+                from {
+                    opacity: 0;
+                    transform: translateY(20px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+    
+            .hero h1, .hero p {
+                animation: fadeInUp 1s ease forwards;
+            }
+    
+            .hero p {
+                animation-delay: 0.2s;
+            }
+    
+            .hero .btn {
+                animation: fadeInUp 1s ease forwards;
+                animation-delay: 0.4s;
+                opacity: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Navbar se mantiene igual -->
+        <!-- ... [código del navbar] ... -->
+    
+        <!-- Hero se mantiene igual -->
+        <!-- ... [código del hero] ... -->
+    
+        <!-- Nueva sección de Servicios -->
+        <section class="services">
+            <div class="container">
+                <h2 class="text-center mb-5" data-aos="fade-up">Nuestros Servicios Destacados</h2>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-user-md"></i>
+                            </div>
+                            <h3 class="service-title">Consultas Médicas</h3>
+                            <p class="service-description">Conectamos pacientes con los mejores especialistas para una atención personalizada y de calidad.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-calendar-check"></i>
+                            </div>
+                            <h3 class="service-title">Citas en Línea</h3>
+                            <p class="service-description">Sistema de reserva de citas fácil y rápido, disponible las 24 horas del día.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-video"></i>
+                            </div>
+                            <h3 class="service-title">Telemedicina</h3>
+                            <p class="service-description">Consultas virtuales desde la comodidad de tu hogar con médicos certificados.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-file-medical"></i>
+                            </div>
+                            <h3 class="service-title">Historial Digital</h3>
+                            <p class="service-description">Accede a tu historial médico de forma segura y organizada en cualquier momento.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <section class="suggestions py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Sugerencias</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="input-group shadow rounded">
+                        <input type="text" class="form-control form-control-lg" placeholder="Escribe tu sugerencia...">
+                        <button class="btn btn-primary">Enviar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+        <!-- Scripts -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+        <script>
+            
+            AOS.init({
+                duration: 800,
+                once: true
+            });
+    
+            
+            window.addEventListener('scroll', function() {
+                const navbar = document.querySelector('.navbar');
+                if (window.scrollY > 50) {
+                    navbar.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
+                    navbar.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.1)';
+                } else {
+                    navbar.style.backgroundColor = 'rgba(255, 255, 255, 0.8)';
+                    navbar.style.boxShadow = 'none';
+                }
+            });
+    
+            
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        </script>
+    </body>
+    </html>
+  
+    
+        <!-- Footer -->
+        <footer class="footer bg-dark text-white py-5">
+            <div class="container">
+                <div class="row g-4">
+                    <div class="col-lg-4">
+                        <img src="IMAGENES/logo_footer.png" alt="Logo Zona Médica" height="40" class="mb-4">
+                        <p class="mb-4">Conectando pacientes con los mejores profesionales de la salud, haciendo la atención médica más accesible y confiable para todos.</p>
+                        <div class="social-links">
+                            <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="text-white"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-2">
+                        <h5 class="mb-4">Enlaces Rápidos</h5>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><a href="index.html" class="footer-link">Inicio</a></li>
+                            <li class="mb-2"><a href="nosotros.html" class="footer-link">Nosotros</a></li>
+                            <li class="mb-2"><a href="noticias.html" class="footer-link">Noticias</a></li>
+                            <li class="mb-2"><a href="medicos.php" class="footer-link">Médicos</a></li>
+                            <li class="mb-2"><a href="contacto.html" class="footer-link">Contacto</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3">
+                        <h5 class="mb-4">Servicios</h5>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><a href="#" class="footer-link">Búsqueda de Médicos</a></li>
+                            <li class="mb-2"><a href="#" class="footer-link">Citas en Línea</a></li>
+                            <li class="mb-2"><a href="#" class="footer-link">Consultas Virtuales</a></li>
+                            <li class="mb-2"><a href="#" class="footer-link">Información Médica</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3">
+                        <h5 class="mb-4">Contacto</h5>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> Av. Principal #123</li>
+                            <li class="mb-2"><i class="fas fa-phone me-2"></i> (123) 456-7890</li>
+                            <li class="mb-2"><i class="fas fa-envelope me-2"></i> contacto@zonamedica.com</li>
+                        </ul>
+                    </div>
+                </div>
+                <hr class="mt-4 mb-4">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start">
+                        <p class="mb-0">&copy; 2024 Zona Médica. Todos los derechos reservados.</p>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <a href="#" class="footer-link me-3">Términos y Condiciones</a>
+                        <a href="#" class="footer-link">Política de Privacidad</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    
+        <!-- Scripts -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+        <script>
+    
+            // Navbar scroll behavior
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 50) {
+                    document.querySelector('.navbar').style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
+                } else {
+                    document.querySelector('.navbar').style.backgroundColor = 'rgba(255, 255, 255, 0.8)';
+                }
+            });
+        </script>
+    </body>
+    </html>
